@@ -1,3 +1,3 @@
-import {onNumPressed,onSignPressed,onEqualPressed,clear} from "./onNumPressed.js";
+import {onNumPressed,onSignPressed,onEqualPressed,clear,addvar} from "./onNumPressed.js";
 
-export {onNumPressed,onSignPressed,onEqualPressed,clear};
+export {onNumPressed,onSignPressed,onEqualPressed,clear,addvar};

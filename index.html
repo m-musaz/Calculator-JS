@@ -9,7 +9,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <body>
-    <div class="container-fluid" style="background-image: linear-gradient(to right,#d3e4f4, #d9ddde);height: 100vh;padding-top: 10%;padding-left: 20%;padding-right:20%;">
+    <div class="container-fluid" style="background-image: linear-gradient(to right,#d3e4f4, #d9ddde);height: 100vh;padding-top: 5%;padding-left: 20%;padding-right:20%;">
         <div class="row" style="background-image: linear-gradient(to right,#5b6a7d, #353e4a);text-align: left;justify-content: center;border-top-left-radius: 25px;border-top-right-radius: 25px;padding-bottom: 5%;border-bottom-left-radius: 25px;border-bottom-right-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
             <h1 style="text-align: center;color: white;">ClassWiz</h1>
             <div class="row" style="background-color: #2d353c;text-align: right;color: white;">
@@ -61,17 +61,24 @@
                 </div>
             </div>
 
-            <div class="col-12 nopad">
-                <h1>Add a Variable</h1>
+            <h4 style="text-align: center;color: white; padding-top: 2%;">Create a Variable</h4>
+            <div class="col-12 variable">
+                <input id="uservar" type="text" style="align-items: right;border-radius: 10px;font-size: large;background-color: #2d353c;color: white;" placeholder="Name your Variable">
             </div>
-
+            <div class="col-12 variable">
+                <input id="uservarval" type="text" style="align-items: right;border-radius: 10px;font-size: large;background-color: #2d353c;color: white;" placeholder="Enter value of Variable">
+            </div>
+            <div class="col-12 variable">
+                <button style="border-radius: 10px;width: 50%;background-color: white;color:#2d353c;font-weight: bold;" onclick="logic.addvar()">Add</button>
+            </div>
         </div>
+
     </div>
-    <script type="module">
-        import * as logic from "./main.js";
-        window.logic = logic;
-    </script>
 </body>
+<script type="module">
+    import * as logic from "./main.js";
+    window.logic = logic;
+</script>
 <style>
     .btns
     {
@@ -90,6 +97,15 @@
         padding-left: 0%;
         padding-right: 0%;
         
+    }
+    .variable
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 2%;
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
     }
 </style>
 </html>

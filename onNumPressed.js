@@ -12,6 +12,13 @@ function onSignPressed(symbol)
 
 function onEqualPressed()
 {
+    let uservar = document.getElementById("uservar").value;
+    if(uservar==="e" || uservar==="pi")
+    {
+        alert("Error Cannot use reserved variable name !!!");
+        return;
+    }
+
     let ans = evalFunc(document.getElementById("inputbox").value);
     document.getElementById("resultbox").textContent=ans;
 }
@@ -21,4 +28,15 @@ function clear()
     document.getElementById("inputbox").value="";
 }
 
-export {onNumPressed,onSignPressed,onEqualPressed,clear};
+function addvar()
+{
+    let uservar = document.getElementById("uservar").value;
+    if(uservar==="e" || uservar==="pi")
+    {
+        alert("Error Cannot use reserved variable name !!!");
+        return;
+    }
+    document.getElementById("inputbox").value+=uservar;
+}
+
+export {onNumPressed,onSignPressed,onEqualPressed,clear,addvar};
