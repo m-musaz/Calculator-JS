@@ -25,7 +25,13 @@ function onEqualPressed()
 
 function clear()
 {
-    document.getElementById("inputbox").value="";
+    let len = document.getElementById("inputbox").value.length;
+    document.getElementById("inputbox").value = document.getElementById("inputbox").value.substring(0, len-1);
+}
+function clearAll()
+{
+    document.getElementById("inputbox").value ="";
+    document.getElementById("resultbox").textContent="Result";
 }
 
 function addvar()
@@ -39,4 +45,4 @@ function addvar()
     document.getElementById("inputbox").value+=uservar;
 }
 
-export {onNumPressed,onSignPressed,onEqualPressed,clear,addvar};
+export {onNumPressed,onSignPressed,onEqualPressed,clear,addvar,clearAll};

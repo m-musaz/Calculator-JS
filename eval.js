@@ -11,13 +11,23 @@ function evalFunc(textString)
     let piCheck = tanCheck.replaceAll("pi","Math.PI");
     let eCheck = piCheck.replaceAll("e","Math.E");
 
-
-
+    uservar?eCheck=eCheck.replaceAll(String(uservar),String(varval)):undefined;
 
     console.log(eCheck);
-    console.log(eval(eCheck));
+    try
+    {
+        console.log(eval(eCheck));
+    }
+    catch(e)
+    {
+        alert(e);
+    }
 
-    return eval(eCheck);
+    let ans = parseFloat(eval(eCheck));
+
+    ans = ans.toFixed(4);
+
+    return String(ans);
 }
 
 export {evalFunc};
